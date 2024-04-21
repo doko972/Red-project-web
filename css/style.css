@@ -73,7 +73,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: var(--white);
 }
 
@@ -83,7 +83,7 @@ h3 {
 }
 
 p {
-  font-size: 1.8rem;
+  font-size: 1rem;
   font-family: var(--font-family);
   color: var(--white);
   text-align: center;
@@ -144,6 +144,12 @@ p {
     background-image: url("../img/znav-bg.webp");
     background-repeat: no-repeat;
     background-position: 50% 80%;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 2rem;
   }
 }
 
