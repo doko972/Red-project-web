@@ -152,7 +152,7 @@ p {
   display: flex;
   justify-content: center;
   height: 4rem;
-  align-items: end;
+  align-items: center;
 }
 
 /* Styles pour l'arrière-plan */
