@@ -1,35 +1,55 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saint Seiya Online</title>
-    <link rel="stylesheet" href="../css/style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saint Seiya Online Chevaliers de Bronze</title>
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-
-            <div class="navbar-container container ">
-                <input type="checkbox" name="" id="">
-                <div class="hamburger-lines">
-                    <span class="line line1"></span>
-                    <span class="line line2"></span>
-                    <span class="line line3"></span>
-                </div>
-                <ul class="menu-items">
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="../athena.html">Athena</a></li>
-                    <li><a href="../poseidon.html">Poseidon</a></li>
-                    <li><a href="../hades.html">Hades</a></li>
-                    <li><a href="#">Calendrier</a></li>
-                    <li><a href="../register/register.html">Inscription</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+          <li><a href="../index.html">Accueil</a></li>
+          <li>
+            <input type="checkbox" id="athena-toggle">
+            <a href="#">Athena</a>
+            <ul class="submenu">
+              <li><a href="../athenaGold.html">Gold</a></li>
+              <li><a href="../athenaSilver.html">Argent</a></li>
+              <li><a href="../athenaBronze.html">Bronze</a></li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="athena-toggle">
+            <a href="#">Poseidon</a>
+            <ul class="submenu">
+              <li><a href="generauxPoseidon.html">Marinas</a></li>
+            </ul>
+          </li>
+          <li>
+            <input type="checkbox" id="athena-toggle">
+            <a href="#">Hades</a>
+            <ul class="submenu">
+              <li><a href="../hadesJuges.html">Juges</a></li>
+              <li><a href="../hadesSpectres.html">Spectres</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Calendrier</a></li>
+          <li><a href="..//register/register.html">Inscription</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
     <main>
         <section class="athena-choose">
             <img class="athena-choose__img background__enfers" src="../img/spectres/deep.webp"
