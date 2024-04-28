@@ -787,6 +787,7 @@ p {
     height: 37.5rem;
     aspect-ratio: 1/2;
   }
+
 }
 
 .slider-container .slider-content {
@@ -933,85 +934,96 @@ p {
   display: none !important;
 }
 
-/*REGITER*/
-.login_cont {
-  margin: 1rem;
-}
+  /*REGITER*/
+  .item-register {
+    margin: 2rem;
+  }
 
-.login_cont .input_signin {
-  display: none;
-}
+  .login_cont {
+    margin: 1rem;
+  }
 
-.content {
-  display: flex;
-  justify-content: center;
-}
+  .login_cont .input_signin {
+    display: none;
+  }
 
-.login_cont .active {
-  display: block;
-}
+  .content {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
 
-.login_nav {
-  width: 300px;
-  height: 45px;
-  text-align: center;
-  margin-bottom: 60px;
-}
 
-.hint {
-  font-size: 12px;
-  text-align: right;
-  padding-right: 10px;
-  margin-bottom: 15px;
-  visibility: hidden;
-}
+  .login_cont .active {
+    display: block;
+  }
 
-.right {
-  border-color: #1dc091;
-}
+  .login_nav {
+    width: 300px;
+    height: 45px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
 
-.hint_right {
-  color: #1dc091;
-}
+  .hint {
+    font-size: 12px;
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 15px;
+    visibility: hidden;
+  }
 
-.wrong {
-  border-color: #EA5A70;
-}
+  .right {
+    border-color: #1dc091;
+  }
 
-.hint_wrong {
-  color: #EA5A70;
-}
+  .hint_right {
+    color: #1dc091;
+  }
 
-.button__register {
-  background-color: var(--bluesea);
-  color: var(--white);
-  width: 8.75rem;
-  height: 3rem;
-  border-radius: 1rem;
-  border: none;
-}
+  .wrong {
+    border-color: #EA5A70;
+  }
 
-.button__register:hover,
-.button__register:focus {
-  background-color: var(--purple);
-  border-color: var(--goldenstrong);
-  color: var(--aqua);
-}
+  .hint_wrong {
+    color: #EA5A70;
+  }
 
-.input_form {
-  height: 2.5rem;
-  background-color: var(--white);
-  color: #333;
-  font-weight: 300;
-  line-height: 2.5rem;
-  width: 20rem;
-  border-radius: 2rem;
-  border: none;
-  padding: 1rem;
-}
+  .button__register {
+    background-color: var(--bluesea);
+    color: var(--white);
+    width: 8.75rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: none;
+  }
 
-.Password-forget{
-  height: 2rem;
-  background-color: none;
-  font-size: 1rem;
-}
+  .button__register:hover,
+  .button__register:focus {
+    background-color: var(--purple);
+    border-color: var(--goldenstrong);
+    color: var(--aqua);
+  }
+
+  .input_form {
+    height: 2.5rem;
+    background-color: var(--white);
+    color: #333;
+    font-weight: 300;
+    line-height: 2.5rem;
+    width: 60vw;
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem;
+  }
+
+  .Password-forget {
+    height: 2rem;
+    background-color: none;
+    font-size: 1rem;
+  }
+
+  .Password-forget:hover,
+  .Password-forget:hover {
+    color: var(--purple);
+  }
