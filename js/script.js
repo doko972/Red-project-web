@@ -1,3 +1,4 @@
+
 const repeat = false;
 const noArrows = false;
 const noBullets = false;
@@ -216,6 +217,7 @@ function slideLeft() {
     updateBullet();
 }
 
+
 function goToIndexSlide(index) {
     const sliding = (slideCurrent > index) ? () => slideRight() : () => slideLeft();
     while (slideCurrent !== index) {
@@ -223,4 +225,9 @@ function goToIndexSlide(index) {
     }
 }
 
+
 slideInitial();
+
+
+
+
