@@ -1100,7 +1100,7 @@ p {
   }
 
   .pictures-img {
-      width: 100vw;
+      width: 100%;
       aspect-ratio: 2/1;
       border: 2px solid black;
   }
