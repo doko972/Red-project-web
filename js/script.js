@@ -1,4 +1,3 @@
-
 const repeat = false;
 const noArrows = false;
 const noBullets = false;

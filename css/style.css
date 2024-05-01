@@ -708,7 +708,7 @@ p {
 }
 
 .athena-choose__img {
-  padding: 4rem
+  padding: 4rem;
 }
 
 .athena-choose__txt {
@@ -1048,6 +1048,11 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+.pictures__ico{
+  height: 3rem;
+  aspect-ratio: 1/1;
+  margin: 1rem;
 }
 
 .pictures-button__rigth{
