@@ -135,6 +135,12 @@ p {
   margin: 0;
   z-index: 10;
 }
+.sticky{
+  position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  z-index: 100;
+}
 
 /* Styles pour les écrans larges */
 @media screen and (min-width: 768px) {
