@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saint Seiya Online</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
 </head>
 
 <body>
@@ -56,20 +59,67 @@
     <div class="title__margin">
         <h1>Saint Seiya Online <br>Rôle Play</h1>
     </div>
-    <article class="page">
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
+    <article class="calendar-page">
+        <div class="calendar-container">
+            <div class="calendar_left">
+                <div class="calendar">
+                    <div class="month">
+                        <i class="form angle-left prev"></i>
+                        <div class="date">decembre 2015</div>
+                        <i class="form angle-right next"></i>
+                    </div>
+                    <div class="weekdays">
+                        <div>Dim</div>
+                        <div>Lun</div>
+                        <div>Mar</div>
+                        <div>Mer</div>
+                        <div>Jeu</div>
+                        <div>Ven</div>
+                        <div>sam</div>
+                    </div>
+                    <div class="days"></div>
+                    <div class="goto-today">
+                        <div class="goto">
+                            <input type="text" placeholder="m/aaaa" class="date-input" />
+                            <button class="goto-btn">Aller</button>
+                        </div>
+                        <button class="today-btn">Aujourd'hui</button>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar_right">
+                <div class="today-date">
+                    <div class="event-day"></div>
+                    <div class="event-date">12 decembre 2022</div>
+                </div>
+                <div class="events"></div>
+                <div class="add-event-wrapper">
+                    <div class="add-event-header">
+                        <div class="title">Ajouter évènement</div>
+                        <i class="form fa-times close"></i>
+                    </div>
+                    <div class="add-event-body">
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Nom de perso RP/PVP" class="event-name" />
+                        </div>
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Présent de" class="event-time-from" />
+                        </div>
+                        <div class="add-event-input">
+                            <input type="text" placeholder="Jusque" class="event-time-to" />
+                        </div>
+                    </div>
+                    <div class="add-event-footer">
+                        <button class="add-event-btn">Ajouter son nom</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-event btn-add-event">
+                <i>Rejoindre évènement</i>
+            </button>
+        </div>
     </article>
-    <script src="../js/animate.js"></script>
+    <script src="../js/calendar.js"></script>
     <footer>
         <div class="footer-bottom">
             <p class="copyright">&copy; 2024 Saint Seiya online Rôle Play
