@@ -934,6 +934,36 @@ p {
   display: none !important;
 }
 
+/*Arrow direction L*/
+.slider-container .slider-left {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  right: 85%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1.5rem 1rem;
+  /* border: 2px solid var(--goldenstrong); */
+  background-image: url("../img/arrowLeft.svg");
+  background-repeat: no-repeat;
+  background-size: 2rem;
+}
+
+/*Arrow dirction r*/
+.slider-container .slider-right {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  left: 85%;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1.5rem 1rem;
+  /* border: 2px solid var(--goldenstrong); */
+  background-image: url("../img/arrowRigth.svg");
+  background-repeat: no-repeat;
+  background-size: 2rem;
+}
+
 /*REGITER*/
 .item-register {
   margin: 2rem;
