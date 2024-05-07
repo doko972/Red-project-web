@@ -119,7 +119,7 @@ p {
   #VIDEO
 \*-----------------------------------*/
 .video-pos {
-  position:relative;
+  position: relative;
   top: -200px;
   left: 0;
 }
@@ -166,13 +166,14 @@ p {
   h2 {
     font-size: 2rem;
   }
-/*-----------------------------------*\
+
+  /*-----------------------------------*\
   #DECO
 \*-----------------------------------*/
-.title__margin {
-  margin: 2rem;
-  /* margin-top: 40rem; */
-}
+  .title__margin {
+    margin: 2rem;
+    /* margin-top: 40rem; */
+  }
 
 }
 
@@ -635,12 +636,13 @@ p {
     display: flex;
     align-items: center;
   }
-    /*-----------------------------------*\
+
+  /*-----------------------------------*\
   #VIDEO
 \*-----------------------------------*/
-.video-pos {
-  visibility: hidden;
-}
+  .video-pos {
+    visibility: hidden;
+  }
 
 }
 
@@ -928,36 +930,6 @@ p {
   transform: translateX(0px);
 }
 
-/*Arrow direction L*/
-.slider-container .slider-left {
-  position: absolute;
-  z-index: 3;
-  display: block;
-  right: 85%;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 1.5rem 1rem;
-  /* border: 2px solid var(--goldenstrong); */
-  background-image: url("../img/arrowLeft.svg");
-  background-repeat: no-repeat;
-  background-size: 2rem;
-}
-
-/*Arrow dirction r*/
-.slider-container .slider-right {
-  position: absolute;
-  z-index: 3;
-  display: block;
-  left: 85%;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 1.5rem 1rem;
-  /* border: 2px solid var(--goldenstrong); */
-  background-image: url("../img/arrowRigth.svg");
-  background-repeat: no-repeat;
-  background-size: 2rem;
-}
-
 .slider-container .not-visible {
   display: none !important;
 }
@@ -1116,9 +1088,9 @@ p {
   right: 1rem;
 }
 
-.pictures-img {
+/* .pictures-img {
   max-width: 100%;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .pictures {
@@ -1132,8 +1104,8 @@ p {
   }
 
   .pictures-img {
-    width: 100%;
-    aspect-ratio: 2/1;
+    /* width: 100%;
+    aspect-ratio: 2/1; */
     border: 2px solid black;
   }
 }
@@ -1145,11 +1117,11 @@ p {
 }
 
 @media screen and (min-width: 768px) {
-  .thumbs {
+  /* .thumbs {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 100%;
-  }
+  } */
 
   .thumbs-itm {
     font-size: 0;
@@ -1179,7 +1151,7 @@ p {
   background-color: var(--black-semi);
 }
 
-.calendar-page{
+.calendar-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1697,7 +1669,8 @@ p {
   background-color: var(--goldenstrong);
   color: var(--purple);
 }
-.btn-add-event{
+
+.btn-add-event {
   border-radius: 2rem;
   height: 2.5rem;
   width: 12rem;
@@ -1756,12 +1729,14 @@ p {
   .add-event-wrapper {
     bottom: 6.25rem;
   }
-  .add-event{
+
+  .add-event {
     position: absolute;
     top: 87%;
     left: 5%;
   }
-  .btn-add-event{
+
+  .btn-add-event {
     border-radius: 2rem;
     height: 2.5rem;
     width: 12rem;
@@ -1778,6 +1753,7 @@ p {
   .calendar .month {
     height: 4.75rem;
   }
+
   .calendar-container .calendar_left {
     width: 90vw;
     height: 80%;
@@ -1801,11 +1777,13 @@ p {
   .calendar_right .today-date {
     padding: 1.25rem;
   }
-  .add-event{
+
+  .add-event {
     position: absolute;
     top: 67%;
     left: 5%;
   }
+
   .add-event-wrapper {
     position: absolute;
     left: 62%;
@@ -1817,12 +1795,12 @@ p {
     transform: translateX(-50%);
     transition: max-height 0.5s ease;
   }
-  
+
   .add-event-wrapper.active {
     max-height: 18.75rem;
   }
 
-  .btn-add-event{
+  .btn-add-event {
     border-radius: 2rem;
     height: 2.5rem;
     width: 12rem;
@@ -1846,3 +1824,138 @@ p {
   content: "\2b";
 }
 
+/**/
+.carousel-container {
+  width: 90%;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--lx-gap);
+
+  .carousel {
+    aspect-ratio: 16/9;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .item {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .caption {
+        width: 100%;
+        padding: var(--lx-space-01);
+        position: absolute;
+        bottom: 0;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      &.active {
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+
+
+  .arrow-button {
+    display: flex;
+    justify-content: center;
+    color: var(--goldenstrong);
+    background-color: var(--purple);
+    border-radius: 2rem;
+    border-color: var(--goldenstrong);
+    transition: all .3s ease;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    font-size: 14px;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .arrow-button>.arrow {
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 6px;
+    transition: all .3s ease;
+  }
+
+  .arrow-button>.arrow::before {
+    display: block;
+    background-color: currentColor;
+    width: 3px;
+    transform-origin: bottom right;
+    height: 2px;
+    position: absolute;
+    opacity: 0;
+    bottom: calc(-2px / 2);
+    transform: rotate(45deg);
+    transition: all .3s ease;
+    content: "";
+    right: 0;
+  }
+
+  .arrow-button:hover>.arrow {
+    transform: rotate(-45deg) translate(4px, 4px);
+    border-color: text-hover-color;
+  }
+
+  .arrow-button:hover>.arrow::before {
+    opacity: 1;
+    width: 8px;
+  }
+
+  .arrow-button:hover {
+    background-color: var(--goldenstrong);
+    border-color: var(--purple);
+    color: var(--purple);
+  }
+
+  .prev {
+    left: -5%;
+  }
+
+  .next {
+    right: -5%;
+  }
+  .arrow-button--position{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 2rem;
+
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      background-color: #242421;
+      transition: background-color 0.2s ease;
+
+      &.active,
+      &:hover {
+        background-color: #ffffe6;
+      }
+    }
+  }
+}
