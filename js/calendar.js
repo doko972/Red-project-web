@@ -37,25 +37,25 @@ const months = [
     "Decembre",
 ];
 
-const eventsArr = [
-    {
-        day: 11,
-        month: 5,
-        year: 2024,
-        events: [
-            {
-                title: "Rassemblement au Chateau d'Hades",
-                time: "20:00",
-            },
-            {
-                title: "Combat Inter Faction RP/PVP",
-                time: "20:30",
-            },
-        ],
-    },
-];
+// const eventsArr = [
+//     {
+//         day: 11,
+//         month: 5,
+//         year: 2024,
+//         events: [
+//             {
+//                 title: "Rassemblement au Chateau d'Hades",
+//                 time: "20:00",
+//             },
+//             {
+//                 title: "Combat Inter Faction RP/PVP",
+//                 time: "20:30",
+//             },
+//         ],
+//     },
+// ];
 
-// const eventsArr = [];
+const eventsArr = [];
 getEvents();
 console.log(eventsArr);
 
