@@ -124,6 +124,26 @@ p {
   left: 0;
 }
 
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+.video-responsive { 
+  overflow:hidden; 
+  padding-bottom:56.25%; 
+  position:relative; 
+  height:0;
+  margin: 5.5rem;
+  }
+  
+  .video-responsive iframe {
+  left:0; 
+  top:0; 
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
 /*-----------------------------------*\
   #NAV
 \*-----------------------------------*/
@@ -375,6 +395,24 @@ p {
     background-size: cover;
     background-position: center 5%;
   }
+  
+  
+.video-responsive { 
+  overflow:hidden; 
+  padding-bottom:56.25%; 
+  position:relative; 
+  height:0;
+  margin: 1.6rem;
+  }
+  
+  .video-responsive iframe {
+  left:0; 
+  top:0; 
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+
 }
 
 /*-----------------------------------*\
@@ -643,6 +681,21 @@ p {
   .video-pos {
     visibility: hidden;
   }
+  .video-responsive { 
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+    margin: 2rem 1.2rem;
+    }
+    
+    .video-responsive iframe {
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+    }
 
 }
 
@@ -1963,7 +2016,8 @@ p {
   .next {
     right: -5%;
   }
-  .arrow-button--position{
+
+  .arrow-button--position {
     display: flex;
     justify-content: space-between;
   }
