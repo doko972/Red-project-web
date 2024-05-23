@@ -116,6 +116,21 @@ p {
   margin-top: 2rem;
 }
 
+.discord-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.discord-container-widget {
+  height: 320px;
+  width: 320px;
+  overflow: hidden;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+
 /*-----------------------------------*\
   #VIDEO
 \*-----------------------------------*/
@@ -130,21 +145,22 @@ iframe {
   height: auto;
 }
 
-.video-responsive { 
-  overflow:hidden; 
-  padding-bottom:56.25%; 
-  position:relative; 
-  height:0;
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
   margin: 5.5rem;
-  }
-  
-  .video-responsive iframe {
-  left:0; 
-  top:0; 
-  height:100%;
-  width:100%;
-  position:absolute;
-  }
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
 /*-----------------------------------*\
   #NAV
 \*-----------------------------------*/
@@ -211,7 +227,6 @@ iframe {
   background-image: url("../img/backathena.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-position: 50% 10%; */
   height: 20rem;
   margin: 0;
   z-index: 0;
@@ -267,6 +282,7 @@ iframe {
 .menu__choose {
   display: flex;
   flex-direction: column;
+
 }
 
 .menu__choose--select a {
@@ -347,7 +363,8 @@ iframe {
   .navbar .menu-items {
     padding-top: 100px;
     background: var(--backgr-blue);
-    height: 50rem;/*Higth of menu*/
+    height: 50rem;
+    /*Higth of menu*/
     max-width: 400px;
     transform: translate(-150%);
     display: flex;
@@ -388,22 +405,22 @@ iframe {
     background-size: cover;
     background-position: center 5%;
   }
-  
-  
-.video-responsive { 
-  overflow:hidden; 
-  padding-bottom:56.25%; 
-  position:relative; 
-  height:0;
-  margin: 1.6rem;
+
+
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin: 1.6rem;
   }
-  
+
   .video-responsive iframe {
-  left:0; 
-  top:0; 
-  height:100%;
-  width:100%;
-  position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 
 }
@@ -413,7 +430,7 @@ iframe {
 \*-----------------------------------*/
 
 .faction {
-  height: 60vh;
+  width: 80vw;
   aspect-ratio: 1/1.2;
   margin-bottom: 2rem;
   display: flex;
@@ -444,14 +461,11 @@ iframe {
   background-image: url("../img/athena.webp");
   background-size: 100%;
   background-position: bottom;
-  transition: transform .5s;
-  /* Animation */
 }
 
 .athena:hover {
-  /* background-color: var(--goldenstrong); */
   color: var(--goldenstrong);
-  transform: scale(1.2);
+
 }
 
 .faction__pos {
@@ -467,14 +481,10 @@ iframe {
   background-image: url("../img/poseidon.webp");
   background-size: 110%;
   background-position: bottom;
-  transition: transform .5s;
-  /* Animation */
 }
 
 .poseidon:hover {
-  /* background-color: var(--bluesea); */
   color: var(--white);
-  transform: scale(1.2);
 }
 
 .faction__had {
@@ -490,14 +500,11 @@ iframe {
   background-image: url("../img/hades.webp");
   background-size: 100%;
   background-position: bottom;
-  transition: transform .5s;
-  /* Animation */
 }
 
 .hades:hover {
   /* background-color: var(--purple); */
   color: var(--white);
-  transform: scale(1.2);
 }
 
 
@@ -606,6 +613,14 @@ iframe {
 }
 
 @media screen and (min-width: 769px) {
+  .faction {
+    width: 30vw;
+    aspect-ratio: 1/1.2;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
   .armorstyle {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr 1fr;
@@ -660,35 +675,28 @@ iframe {
     font-size: 2rem;
   }
 
-  .faction {
-    height: 40vh;
-    aspect-ratio: 1/1.2;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-  }
-
   /*-----------------------------------*\
   #VIDEO
 \*-----------------------------------*/
   .video-pos {
     visibility: hidden;
   }
-  .video-responsive { 
-    overflow:hidden; 
-    padding-bottom:56.25%; 
-    position:relative; 
-    height:0;
+
+  .video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
     margin: 2rem 1.2rem;
-    }
-    
-    .video-responsive iframe {
-    left:0; 
-    top:0; 
-    height:100%;
-    width:100%;
-    position:absolute;
-    }
+  }
+
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
 
 }
 
@@ -817,6 +825,7 @@ iframe {
     width: 30vw;
     padding: 4rem
   }
+
 }
 
 /*-----------------------------------*\
@@ -863,6 +872,7 @@ iframe {
     aspect-ratio: 1/2;
   }
 
+
 }
 
 .slider-container .slider-content {
@@ -888,7 +898,6 @@ iframe {
 .slider-container .slider-content .slider-single .slider-single-image {
   height: 100%;
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0);
-  /*background img*/
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
   transform: scale(1.2);
   opacity: 0;
@@ -980,6 +989,10 @@ iframe {
   display: none !important;
 }
 
+.slider-single-image-border {
+  border-radius: 2rem;
+}
+
 /*Arrow direction L*/
 .slider-container .slider-left {
   position: absolute;
@@ -1066,7 +1079,7 @@ iframe {
 }
 
 .button__register {
-  background-color: var(--bluesea);
+  background-color: var(--black-semi);
   color: var(--white);
   width: 8.75rem;
   height: 3rem;
@@ -1075,10 +1088,18 @@ iframe {
 }
 
 .button__register:hover,
-.button__register:focus {
+.button__register:focus,
+.button__register--min:hover,
+.button__register--min:focus {
   background-color: var(--purple);
   border-color: var(--goldenstrong);
   color: var(--aqua);
+}
+
+.button__register--min {
+  margin-bottom: 1rem;
+  width: 8.75rem;
+  height: 2rem;
 }
 
 .input_form {
@@ -1184,6 +1205,7 @@ iframe {
     aspect-ratio: 2/1; */
     border: 2px solid black;
   }
+
 }
 
 /* THUMBS */
