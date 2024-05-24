@@ -114,11 +114,13 @@ p {
   background-color: var(--black-semi);
   height: 100%;
   margin-top: 2rem;
+  border-radius: 1rem;
 }
 
 .discord-container {
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  margin: 2rem;
 
 }
 
@@ -650,7 +652,8 @@ iframe {
   }
 
   .divinite {
-    margin: 4rem;
+    display: grid;
+    grid-template: repeat(4, 1fr);
   }
 }
 
@@ -1788,7 +1791,7 @@ iframe {
   }
 
   .calendar-container {
-    min-height: 50vh;
+    min-height: 100%;
     flex-direction: column;
     border-radius: 0;
   }
@@ -1846,7 +1849,7 @@ iframe {
   }
 }
 
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   .calendar .month {
     height: 4.75rem;
   }
@@ -1907,7 +1910,7 @@ iframe {
     color: var(--white);
     font-size: 1rem;
   }
-}
+} */
 
 .form {
   font-style: normal;
@@ -2055,5 +2058,49 @@ iframe {
         background-color: #ffffe6;
       }
     }
+  }
+}
+
+.table-containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1rem;
+  background-color: var(--black-semi);
+  border-radius: 1rem;
+}
+
+.table-rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  color: var(--white);
+}
+.table-ttl{
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  color: var(--white);
+}
+
+.table-array {
+  color: var(--white);
+  font-size: 1rem;
+  border: 3px solid white;
+
+}
+
+.table-array__border {
+  border: 2px solid white;
+  height: 50px;
+  padding: 1rem;
+}
+
+@media (max-width: 500px) {
+  .table-containers {
+    display: flex;
+    flex-direction: column;
   }
 }
