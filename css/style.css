@@ -19,6 +19,7 @@ backathena*,
   --red: #FF0000;
   --black-semi: rgba(0, 0, 0, 0.6);
   --black-80: rgba(0, 0, 0, 0.8);
+  --transparent: #00000000;
   --grey-inter: #878895;
   --font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 16px;
@@ -930,7 +931,7 @@ iframe {
 }
 
 .slider__title {
-  margin: 2rem;
+  margin-top: 15rem;
 }
 
 .slider-container {
@@ -964,6 +965,7 @@ iframe {
   width: 70%;
   height: 60%;
   transform: translate(-50%, -50%);
+  margin: 1rem;
 }
 
 .slider-container .slider-content .slider-single {
@@ -994,7 +996,7 @@ iframe {
 /*Name in bottom img*/
 .slider-container .slider-content .slider-single .slider-single-title {
   display: block;
-  float: left;
+  /* float: left; */
   font-size: 1.5rem;
   font-family: var(--font-family);
   font-weight: 400;
@@ -1167,6 +1169,7 @@ iframe {
   height: 3rem;
   border-radius: 1rem;
   border: none;
+  font-size: 1.2rem;
 }
 
 .button__register:hover,
@@ -1369,7 +1372,7 @@ iframe {
 }
 
 .calendar .month {
-  width: 100%;
+  /* width: 90%; */
   height: 9.375rem;
   display: flex;
   align-items: center;
@@ -1408,7 +1411,7 @@ iframe {
 }
 
 .calendar .weekdays {
-  width: 100%;
+  width: 90%;
   height: 100px;
   display: flex;
   align-items: center;
@@ -1428,7 +1431,7 @@ iframe {
 }
 
 .calendar .days {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1436,6 +1439,7 @@ iframe {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1.25rem;
+  gap: .5rem;
 }
 
 .calendar .days .day {
@@ -1526,7 +1530,7 @@ iframe {
 }
 
 .calendar .goto-today {
-  width: 100%;
+  width: 90%;
   height: 1.875rem;
   display: flex;
   align-items: center;
@@ -1832,17 +1836,27 @@ iframe {
 }
 .btn-add-event--register{
   border-radius: 2rem;
-  width: 12rem;
+  width: auto;
   background-color: var(--black-semi);
   border-color: var(--bluesea);
   color: var(--white);
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+  padding: .5rem 2rem;
 }
 .btn-add-event--register:focus,
 .btn-add-event--register:hover{
   background-color: var(--bluesea);
   color: var(--white);
+}
+.btn-add-event--register--nav{
+  width: auto;
+  background-color: var(--transparent);
+  border: none;
+  color: var(--white);
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+  padding: .5rem 0;
 }
 
 /* media queries */
@@ -1972,6 +1986,10 @@ iframe {
     border-color: var(--bluesea);
     color: var(--white);
     font-size: 1rem;
+  }
+
+  .slider__title {
+    margin-top: 1rem;
   }
 } 
 
