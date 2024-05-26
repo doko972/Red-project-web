@@ -208,7 +208,11 @@ iframe {
 \*-----------------------------------*/
   .title__margin {
     margin: 2rem;
-    /* margin-top: 40rem; */
+    margin-top: 12rem;
+  }
+  .title__margin--register {
+    margin: 2rem;
+    margin-top: 10rem;
   }
 
 }
@@ -1165,11 +1169,10 @@ iframe {
 .button__register {
   background-color: var(--black-semi);
   color: var(--white);
-  width: 8.75rem;
-  height: 3rem;
   border-radius: 1rem;
   border: none;
   font-size: 1.2rem;
+  padding: 1rem;
 }
 
 .button__register:hover,
