@@ -214,6 +214,9 @@ iframe {
     margin: 2rem;
     margin-top: 10rem;
   }
+  .title__margin--index {
+    margin: 2rem;
+  }
 
 }
 
@@ -1185,9 +1188,8 @@ iframe {
 }
 
 .button__register--min {
-  margin-bottom: 1rem;
   width: 8.75rem;
-  height: 2rem;
+  margin-bottom: .5rem;
 }
 
 .input_form {
