@@ -162,12 +162,10 @@ p {
   }
 
   .title__margin {
-    margin: 2rem;
-    margin-top: 12rem;
+    margin-top: 14rem;
   }
   .title__margin--register {
-    margin: 2rem;
-    margin-top: 10rem;
+    margin-top: 12rem;
   }
   .title__margin--index {
     margin: 2rem;
@@ -213,7 +211,7 @@ p {
   top: 0;
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: relative;
 }
 
 .menu-items {
@@ -388,6 +386,35 @@ p {
     width: 100%;
     position:relative;
   }  
+}
+/*-----------------------------------*\
+  #VIDEO
+\*-----------------------------------*/
+.video-pos {
+  position: relative;
+  top: -200px;
+  left: 0;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border-radius: 1rem;
 }
 /*-----------------------------------*\
   #MENU DIVIN
@@ -605,11 +632,6 @@ p {
     background-color: var(--black-semi);
     border: 4px solid var(--white);
     width: 10rem;
-  }
-
-  .divinite {
-    display: grid;
-    grid-template: repeat(4, 1fr);
   }
   
   .navbar-container__back {
@@ -1176,7 +1198,6 @@ p {
 }
 
 .calendar .month {
-  /* width: 90%; */
   height: 9.375rem;
   display: flex;
   align-items: center;
@@ -1818,6 +1839,7 @@ p {
     width: 100%;
     position: relative;
     overflow: hidden;
+    border-radius: 1rem;
 
     .item {
       opacity: 0;
@@ -1945,7 +1967,7 @@ p {
   flex-direction: row;
   align-items: center;
   justify-content:space-evenly;
-  margin: 1rem 6rem;
+  margin: 1rem 2rem;
   background-color: var(--black-semi);
   border-radius: 1rem;
 }

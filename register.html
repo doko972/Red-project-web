@@ -19,31 +19,32 @@
           <span class="line line3"></span>
         </div>
         <ul class="menu-items">
-          <li><button class="btn-add-event--register--nav"><a href="../index.html">Accueil</a></button></li>
+          <li><button class="btn-add-event--register--nav"><a href="./index.html">Accueil</a></button></li>
           <li><input type="checkbox" id="athena-toggle">
             <button class="btn-add-event--register--nav"><a href="#">Athena</a></button>
             <ul class="submenu">
-              <li><a href="../athenaGold.html">Gold</a></li>
-              <li><a href="../athenaSilver.html">Argent</a></li>
-              <li><a href="../athenaBronze.html">Bronze</a></li>
+              <li><a href="./athenaGold.html">Gold</a></li>
+              <li><a href="./athenaSilver.html">Argent</a></li>
+              <li><a href="./athenaBronze.html">Bronze</a></li>
             </ul>
           </li>
           <li>
             <input type="checkbox" id="athena-toggle">
             <button class="btn-add-event--register--nav"><a href="#">Poseidon</a></button>
             <ul class="submenu">
-              <li><a href="../generauxPoseidon.html">Marinas</a></li>
+              <li><a href="./generauxPoseidon.html">Marinas</a></li>
             </ul>
           </li>
           <li>
             <input type="checkbox" id="athena-toggle">
             <button class="btn-add-event--register--nav"><a href="#">Hades</a></button>
             <ul class="submenu">
-              <li><a href="../hadesJuges.html">Juges</a></li>
-              <li><a href="../hadesSpectres.html">Spectres</a></li>
+              <li><a href="./hadesJuges.html">Juges</a></li>
+              <li><a href="./hadesSpectres.html">Spectres</a></li>
             </ul>
           </li>
-          <li><button class="btn-add-event--register--nav"><a href="../calendrier/calendar.html">Calendrier</a></button></li>
+          <li><button class="btn-add-event--register--nav"><a href="../calendrier/calendar.html">Calendrier</a></button>
+          </li>
           <li><button class="btn-add-event--register--nav"><a href="../carousel/carousel.html">Le jeu</a></button></li>
           <li><button class="btn-add-event--register--nav"><a href="../register.html">Connexion</a></button></li>
           <li><button class="btn-add-event--register"><a href="../register.html">S'inscrire</a></button></li>
@@ -51,45 +52,44 @@
       </div>
     </nav>
   </header>
-  <div class="navbar-container__back txt-pos">
-  </div>
-  <div class="title__margin--register">
-    <h1>Saint Seiya Online <br>Rôle Play</h1>
-  </div>
   <article>
+    <div class="navbar-container__back txt-pos">
+    </div>
+    <div class="title__margin--register">
+      <h1>Saint Seiya Online <br>Rôle Play</h1>
+    </div>
     <!--REGISTER-->
-      <div class="item-register">
-        <p>Minimum 8 lettres en minuscule et/ou chiffres, <br>sans caractères spéciaux</p>
-        <div class="content">
-          <div>
-            <form class="login_cont" action=register.php method=post>
-              <div class="input_signup active">
-                <input class="input input_form" id="user_name" type="text" name="login"
-                  aria-label="Nom d’utilisateur (contient des lettres/chiffres)"
-                  placeholder="Nom d’utilisateur/Username">
-                <div class="hint">Nom d’utilisateur</div>
-                <input class="input input_form" id="user_email" type="text" name=email aria-label="EMail"
-                  placeholder="Email">
-                <div class="hint">Adresse e-mail</div>
-                <input class="input input_form" id="password" type="password" aria-label="MdP" name=passwd
-                  placeholder="Mdp/Password">
-                <div class="hint">Mot de passe （Minimum 6 caracteres）</div>
-                <input class="input input_form" id="repassword" type="password" name=repasswd aria-label="Mdp"
-                  placeholder="Mdp/Password">
-                <div class="hint">Saisir à nouveau votre mot de passe</div>
-                <div class="content">
-                  <input type="submit" id="submit" class="button button__register" name="button"
-                    value="Cliquez sur S’inscrire">
-                </div>
-                <div class="content">
-                  <span><a class="Password-forget" href="forgot_password.php">Mot de passe oublié ?</a></span>
-                </div>
+    <div class="item-register">
+      <p>Minimum 8 lettres en minuscule et/ou chiffres, <br>sans caractères spéciaux</p>
+      <div class="content">
+        <div>
+          <form class="login_cont" action=register.php method=post>
+            <div class="input_signup active">
+              <input class="input input_form" id="user_name" type="text" name="login"
+                aria-label="Nom d’utilisateur (contient des lettres/chiffres)" placeholder="Nom d’utilisateur/Username">
+              <div class="hint">Nom d’utilisateur</div>
+              <input class="input input_form" id="user_email" type="text" name=email aria-label="EMail"
+                placeholder="Email">
+              <div class="hint">Adresse e-mail</div>
+              <input class="input input_form" id="password" type="password" aria-label="MdP" name=passwd
+                placeholder="Mdp/Password">
+              <div class="hint">Mot de passe （Minimum 6 caracteres）</div>
+              <input class="input input_form" id="repassword" type="password" name=repasswd aria-label="Mdp"
+                placeholder="Mdp/Password">
+              <div class="hint">Saisir à nouveau votre mot de passe</div>
+              <div class="content">
+                <input type="submit" id="submit" class="button button__register" name="button"
+                  value="Cliquez sur S’inscrire">
               </div>
-          </div>
-          </form>
-
+              <div class="content">
+                <span><a class="Password-forget" href="forgot_password.php">Mot de passe oublié ?</a></span>
+              </div>
+            </div>
         </div>
+        </form>
+
       </div>
+    </div>
     <!--END REGISTER-->
   </article>
   <script src="js/script.js"></script>
