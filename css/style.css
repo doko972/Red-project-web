@@ -222,8 +222,8 @@ iframe {
 }
 .navbar-container__back-video{
   left: 0;
-  top: -170px;
-  height: 100%;
+  top: 0;
+  /* height: 100%; */
   width: 100%;
   position:relative;
 }
@@ -438,7 +438,7 @@ iframe {
   }
   .navbar-container__back-video{
     left: 0;
-    top: -40px;
+    top: 0;
     height: 100%;
     width: 100%;
     position:relative;
@@ -902,8 +902,8 @@ iframe {
   }
   .navbar-container__back-video{
     left: 0;
-    top: -80px;
-    height: 100%;
+    top: 0;
+    /* height: 100%; */
     width: 100%;
     position:relative;
   }
