@@ -1967,7 +1967,6 @@ iframe {
   flex-direction: row;
   align-items: center;
   justify-content:space-evenly;
-  margin: 1rem 2rem;
   background-color: var(--black-semi);
   border-radius: 1rem;
 }
@@ -1984,7 +1983,6 @@ iframe {
   font-size: 1rem;
   border: 3px solid white;
   height: 23rem;
-  margin: 1rem 1rem 0 1rem;
   border-radius: 1rem;
 }
 
