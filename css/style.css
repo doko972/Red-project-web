@@ -176,11 +176,21 @@ iframe {
 /* Styles pour les écrans larges */
 @media screen and (min-width: 768px) {
   .navbar {
+    position: absolute;
     background-size: 100%;
     background-position: center;
     background-image: url("../img/znav-bg.webp");
     background-repeat: no-repeat;
     background-position: 50% 80%;
+    width: 100%;
+    min-width: 1200px;
+    height: 5.5rem;
+    padding-top: 1.25rem;
+    top: 60px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 100;
+    transition: padding ease .3s;
   }
 
   p {
@@ -223,7 +233,7 @@ iframe {
 .navbar-container__back-video{
   left: 0;
   top: 0;
-  /* height: 100%; */
+  height: auto;
   width: 100%;
   position:relative;
 }
@@ -255,7 +265,7 @@ iframe {
   list-style: none;
   margin-left: 1.5rem;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.875rem;
   position: relative;
   /* Ajout d'une position relative pour les sous-menus */
 }
@@ -332,7 +342,7 @@ iframe {
     display: block;
     height: 2rem;
     width: 1.8rem;
-    top: 2rem;
+    top: .5rem;
     right: .6rem;
     z-index: 5;
     opacity: 0;
@@ -343,7 +353,7 @@ iframe {
     height: 23px;
     width: 35px;
     position: absolute;
-    top: 1.3rem;
+    top: .5rem;
     right: .6rem;
     z-index: 2;
     display: flex;
@@ -673,6 +683,28 @@ iframe {
     display: grid;
     grid-template: repeat(4, 1fr);
   }
+  
+  .navbar-container__back {
+    /* background-image: url("../img/starting.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    z-index: 0;
+  }
+  .navbar-container__back-video{
+    width: 1920px;
+    left: 50%;
+    top: 0;
+    height: auto;
+    width: 100%;
+    position:absolute;
+    z-index: 1;
+    transform: translateY(-26%);
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -897,13 +929,13 @@ iframe {
   .slider-container {
     position: relative;
     margin: 0 auto;
-    height: 37.5rem;
+    /* height: 37.5rem; */
     aspect-ratio: 1/2;
   }
   .navbar-container__back-video{
     left: 0;
-    top: 0;
-    /* height: 100%; */
+    top: 115px;
+    height: auto;
     width: 100%;
     position:relative;
   }
@@ -1895,7 +1927,7 @@ iframe {
   }
 }
 
-/* @media screen and (max-width: 500px) {
+ @media screen and (max-width: 500px) {
   .calendar .month {
     height: 4.75rem;
   }
@@ -1956,7 +1988,7 @@ iframe {
     color: var(--white);
     font-size: 1rem;
   }
-} */
+} 
 
 .form {
   font-style: normal;
