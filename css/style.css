@@ -1597,7 +1597,6 @@ iframe {
   flex-wrap: wrap;
   gap: 0.625rem;
   align-items: center;
-  justify-content: space-between;
   padding: 0 2.5rem;
   padding-left: 4.375rem;
   margin-top: 3.125rem;
