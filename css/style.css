@@ -695,6 +695,7 @@ iframe {
     margin: 0;
     z-index: 0;
   }
+
 }
 
 @media (min-width: 769px) and (max-width: 1200px) {
@@ -836,6 +837,7 @@ iframe {
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
   transform: scale(1.2);
   opacity: 0;
+  margin-bottom: 2rem;
 }
 
 .slider-container .slider-content .slider-single .slider-single-download:hover,
@@ -930,13 +932,11 @@ iframe {
   position: absolute;
   z-index: 3;
   display: block;
-  right: 85%;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 1.5rem 1rem;
-  background-image: url("../img/arrowLeft.svg");
+  top: 33.125rem;
+  background-image: url("../img/btn-prev.png");
   background-repeat: no-repeat;
-  background-size: 2rem;
+  width: 4rem;
+  height: 50%;
 }
 
 .slider-container .slider-right {
@@ -944,12 +944,11 @@ iframe {
   z-index: 3;
   display: block;
   left: 85%;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 1.5rem 1rem;
-  background-image: url("../img/arrowRigth.svg");
+  top: 33.125rem;
+  background-image: url("../img/btn-next.png");
   background-repeat: no-repeat;
-  background-size: 2rem;
+  width: 4rem;
+  height: 50%;
 }
 
 .item-register {
@@ -1812,6 +1811,19 @@ iframe {
   .slider__title {
     margin-top: 1rem;
   }
+  
+  .slider-container 
+  .slider-left {
+    top: 23rem;
+    right: 80%;
+  }
+  
+  .slider-container 
+  .slider-right {
+    top: 23rem;
+    left: 80%;
+  }
+
 } 
 
 .form {
@@ -2005,6 +2017,9 @@ iframe {
     flex-direction: column;
     margin: 1rem;
   }
+  .slider-container {
+    height: 400px;
+  }
   
 }
 /*-----------------------------------*\
@@ -2015,6 +2030,9 @@ iframe {
   color: var(--white);
   text-align: center;
   padding-block: 15px;
+}
+.footer-top{
+  margin-top: 10rem;
 }
 
 .copyright {
