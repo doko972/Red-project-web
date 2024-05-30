@@ -1893,6 +1893,7 @@ iframe {
 
 .copyright-link {
   color: var(--white);
+  font-size: 1rem;
 }
 
 .footer-bottom-list {
@@ -1905,6 +1906,7 @@ iframe {
 
 .footer-bottom-link {
   padding-inline-start: 20px;
+  font-size: 1rem;
 }
 
 .footer-bottom-link::before {
