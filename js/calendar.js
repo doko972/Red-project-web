@@ -37,23 +37,6 @@ const months = [
     "Decembre",
 ];
 
-// const eventsArr = [
-//     {
-//         day: 11,
-//         month: 5,
-//         year: 2024,
-//         events: [
-//             {
-//                 title: "Rassemblement au Chateau d'Hades",
-//                 time: "20:00",
-//             },
-//             {
-//                 title: "Combat Inter Faction RP/PVP",
-//                 time: "20:30",
-//             },
-//         ],
-//     },
-// ];
 
 const eventsArr = [];
 getEvents();
@@ -231,9 +214,6 @@ function gotoDate() {
 
 //function get active day day name and date and update eventday eventdate
 function getActiveDay(date) {
-    // const day = new Date(year, month, date);
-    // const dayName = day.toString().split(" ")[0];
-    // eventDay.innerHTML = dayName;
     eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
 
@@ -391,7 +371,6 @@ addEventSubmit.addEventListener("click", () => {
     addEventFrom.value = "";
     addEventTo.value = "";
     updateEvents(activeDay);
-    //select active day and add event class if not added
     const activeDayEl = document.querySelector(".day.active");
     if (!activeDayEl.classList.contains("event")) {
         activeDayEl.classList.add("event");
