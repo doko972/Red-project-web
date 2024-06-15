@@ -37,12 +37,53 @@ const months = [
     "Decembre",
 ];
 
+let eventsArr = [];
+fetch('data.json')
+    .then(response => {
+        console.log('Statut de la réponse:', response.status);
+        if (!response.ok) {
+            throw new Error('Erreur HTTP, statut = ' + response.status);
+        }
+        return response.text();
+    })
+    .then(text => {
+        console.log('Contenu brut JSON:', text); 
+        try {
+            const data = JSON.parse(text);
+            console.log('Données JSON chargées:', data);
+            eventsArr = data;
+            initCalendar();
+        } catch (error) {
+            console.error('Erreur lors de l\'analyse JSON:', error);
+        }
+    })
+    .catch(error => {
+        console.error('Erreur lors du chargement des données JSON:', error);
+    });
+// const eventsArr = [
+//     {
+//         day: 30,
+//         month: 8,
+//         year: 2024,
+//         events: [
+//             {
+//                 title: "reprise des activités sur le serveur",
+//                 text: "Premier tournois PVP avec vos perso RP, avec à la clef : Nouvelle monture, déblocage d'une nouvelle armure divine, etc... pour le ou les gagnant(s) ! N'hésitez pas à monter votre perso principal pour être le meilleurs !",
+//                 time: "08:00 PM",
+//             }
+//             // },
+//             // {
+//             //     title: "Event 2",
+//             //     time: "11:00 AM",
+//             // },
+//         ],
+//     },
+// ];
 
-const eventsArr = [];
 getEvents();
 console.log(eventsArr);
 
-//function to add days in days with class day and prev-date next-date on previous month and next month days and active on today
+//Add days in days with class day and prev-date next-date on previous month and next month days and active on today
 function initCalendar() {
     const firstDay = new Date(year, month, 1);
     const lastDay = new Date(year, month + 1, 0);
@@ -101,7 +142,6 @@ function initCalendar() {
     addListner();
 }
 
-//function to add month and year on prev and next button
 function prevMonth() {
     month--;
     if (month < 0) {
@@ -230,10 +270,11 @@ function updateEvents(date) {
                 events += `<div class="event">
             <div class="title">
               <i class="fas fa-circle"></i>
-              <h3 class="event-title">${event.title}</h3>
+              <h3 class="event-title">${event.text}</h3>
             </div>
-            <div class="event-time">
-              <span class="event-time">${event.time}</span>
+            <div class="event-time-align">
+              <span class="event-time">Debut : ${event.time}</span>
+              <span class="event-time">Fin: ${event.endTime}</span>
             </div>
         </div>`;
             });
@@ -381,41 +422,41 @@ addEventSubmit.addEventListener("click", () => {
 // Function to delete event when clicked on event
 eventsContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("event")) {
-      // Prompt user for deletion code
-      const deletionCode = prompt("Veuillez entrer le code de suppression :");
-      // Check if the deletion code is correct
-      if (deletionCode === "4321") {
-        if (confirm("Êtes-vous sûr de vouloir supprimer cet événement?")) {
-          const eventTitle = e.target.children[0].children[1].innerHTML;
-          eventsArr.forEach((event) => {
-            if (
-              event.day === activeDay &&
-              event.month === month + 1 &&
-              event.year === year
-            ) {
-              event.events.forEach((item, index) => {
-                if (item.title === eventTitle) {
-                  event.events.splice(index, 1);
-                }
-              });
-              // If no events left in a day then remove that day from eventsArr
-              if (event.events.length === 0) {
-                eventsArr.splice(eventsArr.indexOf(event), 1);
-                // Remove event class from day
-                const activeDayEl = document.querySelector(".day.active");
-                if (activeDayEl.classList.contains("event")) {
-                  activeDayEl.classList.remove("event");
-                }
-              }
+        // Prompt user for deletion code
+        const deletionCode = prompt("Veuillez entrer le code de suppression :");
+        // Check if the deletion code is correct
+        if (deletionCode === "4321") {
+            if (confirm("Êtes-vous sûr de vouloir supprimer cet événement?")) {
+                const eventTitle = e.target.children[0].children[1].innerHTML;
+                eventsArr.forEach((event) => {
+                    if (
+                        event.day === activeDay &&
+                        event.month === month + 1 &&
+                        event.year === year
+                    ) {
+                        event.events.forEach((item, index) => {
+                            if (item.title === eventTitle) {
+                                event.events.splice(index, 1);
+                            }
+                        });
+                        // If no events left in a day then remove that day from eventsArr
+                        if (event.events.length === 0) {
+                            eventsArr.splice(eventsArr.indexOf(event), 1);
+                            // Remove event class from day
+                            const activeDayEl = document.querySelector(".day.active");
+                            if (activeDayEl.classList.contains("event")) {
+                                activeDayEl.classList.remove("event");
+                            }
+                        }
+                    }
+                });
+                updateEvents(activeDay);
             }
-          });
-          updateEvents(activeDay);
+        } else {
+            alert("Code de suppression incorrect. L'événement n'a pas été supprimé.");
         }
-      } else {
-        alert("Code de suppression incorrect. L'événement n'a pas été supprimé.");
-      }
     }
-  });
+});
 
 //function to save events in local storage
 function saveEvents() {

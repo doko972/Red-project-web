@@ -1254,6 +1254,9 @@ iframe {
   font-size: 2rem;
   color: var(--white-grey);
   background-color: var(--purple);
+  /* background-image: url("../img/url0.png");
+  background-repeat: no-repeat;
+  background-size: 3rem; */
 }
 .calendar .days .active::before {
   content: "";
@@ -1376,7 +1379,7 @@ iframe {
 }
 .events .event {
   position: relative;
-  width: 95%;
+  /* width: 100%; */
   min-height: 4.375rem;
   display: flex;
   justify-content: center;
@@ -1411,10 +1414,16 @@ iframe {
 .events .event:hover i {
   color: var(--white);
 }
-.events .event .event-time {
-  font-size: 0.8rem;
+.event-time-align{
+  display: flex;
+  flex-direction: column;
+}
+.events 
+.event 
+.event-time {
+  font-size: 1.2rem;
   font-weight: 400;
-  color: var(--grey-inter);
+  color: var(--white);
   margin-left: 15px;
   pointer-events: none;
 }
