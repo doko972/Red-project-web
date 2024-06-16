@@ -71,7 +71,7 @@
                     <script>
                         setTimeout(function () {
                             window.location.href = 'index.php';
-                        }, 10000);
+                        }, 3000);
                     </script>
                 </div>
             </div>
