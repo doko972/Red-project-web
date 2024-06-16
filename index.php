@@ -65,16 +65,49 @@
   <section>
     <article>
       <div class="status-server">
-        <?php
-        include "config.php";
-        $conn = new mysqli($DBHost, $DBUser, $DBPassword, $DBName);
-        if ($conn->connect_error) {
-          echo "<p class='status-server__align' style='color: red;'>Serveur hors ligne: " . $conn->connect_error . "</p>";
-        } else {
-          echo "<p class='status-server__align' style='color: green;'>Serveur en ligne</p>";
+      <?php
+include "config.php";
+
+$statusMessage = "";
+$usersMessage = "";
+
+$conn = new mysqli($DBHost, $DBUser, $DBPassword, $DBName);
+
+if ($conn->connect_error) {
+    $statusMessage = "<p class='status-server__align' style='color: red;'>Serveur hors ligne: " . $conn->connect_error . "</p>";
+} else {
+    $statusMessage = "<p class='status-server__align' style='color: green;'>Serveur en ligne</p>";
+
+    $count = 0;
+    try {
+        $stmt = $conn->query("SELECT COUNT(*) AS user_count FROM users");
+        if ($stmt) {
+            $row = $stmt->fetch_assoc();
+            $count = $row['user_count'];
         }
-        $conn->close();
-        ?>
+    } catch (Exception $e) {
+        $count = -1;
+    }
+
+    try {
+        $user = [0, 0, 0];
+        DeliveryDB::GetMaxOnlineNum($user);
+        if ($user[2] === null) {
+            $statusMessage = "<p class='status-server__align' style='color: red;'>Serveur hors ligne</p>";
+            $user[2] = 0;
+        }
+        $usersMessage = "<p class='status-server__align'>Utilisateurs connectés: " . $user[2] . " / " . $count . "</p>";
+    } catch (Exception $e) {
+        $usersMessage = "<p class='status-server__align'>Utilisateurs connectés: -1 / " . $count . "</p>";
+    }
+
+    $conn->close();
+}
+
+echo $statusMessage;
+echo $usersMessage;
+?>
+        
       </div>
       </div>
       <div class="texte-position textebackground">
