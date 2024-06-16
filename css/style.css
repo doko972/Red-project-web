@@ -1981,3 +1981,10 @@ iframe {
   content: "";
   position: absolute;
 }
+/*Server status*/
+.status-server{
+display: flex;
+}
+.status-server__align {
+  text-align: left;
+}
