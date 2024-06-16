@@ -11,6 +11,7 @@
     <link rel="icon" href="img/url0.ico">
     <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
     <header class="sticky">
         <nav class="navbar">
@@ -56,19 +57,34 @@
             </div>
         </nav>
     </header>
-    <section>
-        <article>
-            <div class="texte-position textebackground">
-                <h1>Bienvenue sur Saint Seiya Online RôlePlay / PVP<?php echo htmlspecialchars($Login); ?> !</h1>
-                <p>Vous allez être redirigé vers la page d'accueil...</p>
-                <script>
-                    setTimeout(function () {
-                        window.location.href = 'index.php';
-                    }, 10000);
-                </script>
+    <main>
+        <section>
+            <article>
+                <div class="title__margin--register">
+                </div>
+                <div class="texte-position__center">
+                <div class="texte-position__heigth textebackground">
+                    <h1>Bienvenue sur Saint Seiya Online RôlePlay PVP
+                        <?php echo htmlspecialchars($Login); ?> !
+                    </h1>
+                    <p>Vous allez être redirigé vers la page d'accueil...</p>
+                    <script>
+                        setTimeout(function () {
+                            window.location.href = 'index.php';
+                        }, 10000);
+                    </script>
+                </div>
             </div>
-        </article>
-    </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 Saint Seiya online Rôle Play
+                <a href="#" class="copyright">doko972.</a>
+            </p>
+        </div>
+    </footer>
 </body>
 
 </html>
